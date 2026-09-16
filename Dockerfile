@@ -3,9 +3,8 @@ FROM node:24-slim
 WORKDIR /real-time-chat-app-docker
 
 COPY package.json ./
-COPY package-lock.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 
